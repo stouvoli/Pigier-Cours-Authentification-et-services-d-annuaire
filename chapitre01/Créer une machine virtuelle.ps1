@@ -1,10 +1,10 @@
 # Définit le nom de la machine virtuelle, le nom du commutateur et le chemin du support d'installation.
 $VMName = 'TESTVM'
 $Switch = 'Default Switch'
-$InstallMedia = 'C:\Users\stouvoli\data sur PC\tools\vm\SERVER_EVAL_x64FRE_fr-fr.iso'
+$InstallMedia = 'C:\mondossier\de\travail\SERVER_EVAL_x64FRE_fr-fr.iso'
 
 # Crée une nouvelle machine virtuelle
-New-VM -Name $VMName -MemoryStartupBytes 500000000 -Generation 2 -NewVHDPath "C:\Users\stouvoli\data sur PC\tools\vm\$VMName.vhdx" -NewVHDSizeBytes 53687091200 -Path "C:\Users\stouvoli\data sur PC\tools\vm\$VMName" -SwitchName $Switch
+New-VM -Name $VMName -MemoryStartupBytes 500000000 -Generation 2 -NewVHDPath "C:\mondossier\de\travail\$VMName.vhdx" -NewVHDSizeBytes 53687091200 -Path "mondossier\de\travail\$VMName" -SwitchName $Switch
 
 # Ajoute un lecteur DVD à la machine virtuelle
 Add-VMScsiController -VMName $VMName
