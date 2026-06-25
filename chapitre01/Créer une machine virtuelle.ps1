@@ -4,7 +4,7 @@ $Switch = 'Default Switch'
 $InstallMedia = 'C:\mondossier\de\travail\SERVER_EVAL_x64FRE_fr-fr.iso'
 
 # Crée une nouvelle machine virtuelle
-New-VM -Name $VMName -MemoryStartupBytes 500000000 -Generation 2 -NewVHDPath "C:\mondossier\de\travail\$VMName.vhdx" -NewVHDSizeBytes 53687091200 -Path "mondossier\de\travail\$VMName" -SwitchName $Switch
+New-VM -Name $VMName -MemoryStartupBytes 1GB -Generation 2 -NewVHDPath "C:\mondossier\de\travail\$VMName.vhdx" -NewVHDSizeBytes 40GB -Path "mondossier\de\travail\$VMName" -SwitchName $Switch
 
 # Ajoute un lecteur DVD à la machine virtuelle
 Add-VMScsiController -VMName $VMName
